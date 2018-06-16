@@ -1,0 +1,6 @@
+framework module Pods_hackinsampa {
+  umbrella header "Pods-hackinsampa-umbrella.h"
+
+  export *
+  module * { export * }
+}
