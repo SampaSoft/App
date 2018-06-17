@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4D5A2E672358195FCAAFFC2E /* Pods_hackinsampa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BFE1C814DB0742C45E0771 /* Pods_hackinsampa.framework */; };
 		BC497D4420D44B86001012E1 /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC497D4320D44B86001012E1 /* TableVC.swift */; };
+		BC9B6FCC20D5B876007CA029 /* OrgaoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9B6FCB20D5B876007CA029 /* OrgaoTVC.swift */; };
+		BC9B6FCE20D5D51D007CA029 /* OrgaoDadosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9B6FCD20D5D51D007CA029 /* OrgaoDadosVC.swift */; };
+		BC9B6FD020D5D903007CA029 /* orgao.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9B6FCF20D5D903007CA029 /* orgao.swift */; };
+		BC9B6FD220D5DD64007CA029 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9B6FD120D5DD64007CA029 /* DataService.swift */; };
 		BCA75F4320D3E37500F38BFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA75F4220D3E37500F38BFA /* AppDelegate.swift */; };
 		BCA75F4520D3E37500F38BFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA75F4420D3E37500F38BFA /* ViewController.swift */; };
 		BCA75F4820D3E37500F38BFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA75F4620D3E37500F38BFA /* Main.storyboard */; };
@@ -17,13 +21,151 @@
 		BCA75F5720D3E8DF00F38BFA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCA75F5620D3E8DF00F38BFA /* GoogleService-Info.plist */; };
 		BCCFF22420D48E4B00BE92D2 /* ExpandableNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFF22320D48E4B00BE92D2 /* ExpandableNames.swift */; };
 		BCCFF22620D4900800BE92D2 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFF22520D4900800BE92D2 /* ContactCell.swift */; };
+		BCCFF22820D5498E00BE92D2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCFF22720D5498E00BE92D2 /* SystemConfiguration.framework */; };
+		BCCFF22A20D5499C00BE92D2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCFF22920D5499C00BE92D2 /* CoreTelephony.framework */; };
+		BCCFF22C20D549B500BE92D2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCFF22B20D549B500BE92D2 /* libsqlite3.tbd */; };
+		BCCFF22E20D549C200BE92D2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCFF22D20D549C200BE92D2 /* libz.tbd */; };
+		BCCFF23520D5566800BE92D2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFF23420D5566800BE92D2 /* LoginVC.swift */; };
+		BCCFF23820D55DA700BE92D2 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFF23720D55DA700BE92D2 /* Constraints.swift */; };
+		BCCFF23A20D5620D00BE92D2 /* DadosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFF23920D5620D00BE92D2 /* DadosVC.swift */; };
+		BCCFF23C20D581A000BE92D2 /* AcompanhamentoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFF23B20D581A000BE92D2 /* AcompanhamentoVC.swift */; };
+		BCCFF23E20D5826400BE92D2 /* SecretariaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFF23D20D5826400BE92D2 /* SecretariaVC.swift */; };
+		BCCFF24020D58F6700BE92D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFF23F20D58F6700BE92D2 /* Constants.swift */; };
+		BCCFF24220D590C000BE92D2 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFF24120D590C000BE92D2 /* ChatVC.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC9B6FE720D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC9C21174725B87AF81908552F002745;
+			remoteInfo = Alamofire;
+		};
+		BC9B6FE920D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2EB69526A1797D570DD779689373F387;
+			remoteInfo = Bolts;
+		};
+		BC9B6FEB20D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 93653E28DD5EB866AD00201F24B4EB53;
+			remoteInfo = FBSDKCoreKit;
+		};
+		BC9B6FED20D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D3356E51E1923AC832672A5FFD8B14C1;
+			remoteInfo = FBSDKLoginKit;
+		};
+		BC9B6FEF20D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 400D1A5F56FC5C8EA2D1C9B125B85F5A;
+			remoteInfo = FirebaseAuth;
+		};
+		BC9B6FF120D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C65E40287627A677230137D1801A7AAC;
+			remoteInfo = FirebaseCore;
+		};
+		BC9B6FF320D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1A6B36598FBE76C08BC4B0266C6848F9;
+			remoteInfo = FirebaseDatabase;
+		};
+		BC9B6FF520D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 24EC1DD2068D351DD6F9BA9A3031B2B0;
+			remoteInfo = FirebaseMessaging;
+		};
+		BC9B6FF720D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0DC68D7A2333C2E1046506174A6CDE92;
+			remoteInfo = GoogleToolboxForMac;
+		};
+		BC9B6FF920D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A2A2EA7E57DEA4A5E2A0C0A0CD1A29F9;
+			remoteInfo = GTMSessionFetcher;
+		};
+		BC9B6FFB20D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8C96683F89EDEDB202DF61470221BE27;
+			remoteInfo = JSQMessagesViewController;
+		};
+		BC9B6FFD20D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 452D0AE2610B987CCB2E037F861035E7;
+			remoteInfo = JSQSystemSoundPlayer;
+		};
+		BC9B6FFF20D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06CF737C954E7C70316B689E4D7E7775;
+			remoteInfo = "leveldb-library";
+		};
+		BC9B700120D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D486FA7B32B5A303CD2CA9F8893484D2;
+			remoteInfo = nanopb;
+		};
+		BC9B700320D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0DF886E3ED84B6A611E9775DF132E1BE;
+			remoteInfo = "Pods-hackinsampa";
+		};
+		BC9B700520D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C0C7355B5CC2FEC59561EEA60B2EE7A7;
+			remoteInfo = Protobuf;
+		};
+		BC9B700720D5E597007CA029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1DABB68C0A819CA4583CAC84148CA9FF;
+			remoteInfo = SwiftKeychainWrapper;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		19F2FF075E445CC4685F2D64 /* Pods-hackinsampa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackinsampa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackinsampa/Pods-hackinsampa.debug.xcconfig"; sourceTree = "<group>"; };
 		38C29F36F6724D346758F13D /* Pods-hackinsampa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackinsampa.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackinsampa/Pods-hackinsampa.release.xcconfig"; sourceTree = "<group>"; };
 		BC33194E20D3EBC0008C12A3 /* hackinsampa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hackinsampa.entitlements; sourceTree = "<group>"; };
 		BC497D4320D44B86001012E1 /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
+		BC9B6FCB20D5B876007CA029 /* OrgaoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgaoTVC.swift; sourceTree = "<group>"; };
+		BC9B6FCD20D5D51D007CA029 /* OrgaoDadosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgaoDadosVC.swift; sourceTree = "<group>"; };
+		BC9B6FCF20D5D903007CA029 /* orgao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orgao.swift; sourceTree = "<group>"; };
+		BC9B6FD120D5DD64007CA029 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = ../Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		BCA75F3F20D3E37500F38BFA /* hackinsampa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackinsampa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA75F4220D3E37500F38BFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCA75F4420D3E37500F38BFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +176,17 @@
 		BCA75F5620D3E8DF00F38BFA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCCFF22320D48E4B00BE92D2 /* ExpandableNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableNames.swift; sourceTree = "<group>"; };
 		BCCFF22520D4900800BE92D2 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		BCCFF22720D5498E00BE92D2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BCCFF22920D5499C00BE92D2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		BCCFF22B20D549B500BE92D2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BCCFF22D20D549C200BE92D2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		BCCFF23420D5566800BE92D2 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		BCCFF23720D55DA700BE92D2 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		BCCFF23920D5620D00BE92D2 /* DadosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadosVC.swift; sourceTree = "<group>"; };
+		BCCFF23B20D581A000BE92D2 /* AcompanhamentoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcompanhamentoVC.swift; sourceTree = "<group>"; };
+		BCCFF23D20D5826400BE92D2 /* SecretariaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretariaVC.swift; sourceTree = "<group>"; };
+		BCCFF23F20D58F6700BE92D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BCCFF24120D590C000BE92D2 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		F6BFE1C814DB0742C45E0771 /* Pods_hackinsampa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackinsampa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -42,6 +195,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCFF22E20D549C200BE92D2 /* libz.tbd in Frameworks */,
+				BCCFF22C20D549B500BE92D2 /* libsqlite3.tbd in Frameworks */,
+				BCCFF22A20D5499C00BE92D2 /* CoreTelephony.framework in Frameworks */,
+				BCCFF22820D5498E00BE92D2 /* SystemConfiguration.framework in Frameworks */,
 				4D5A2E672358195FCAAFFC2E /* Pods_hackinsampa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +209,10 @@
 		4244CDEC5A37124CACF65107 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCCFF22D20D549C200BE92D2 /* libz.tbd */,
+				BCCFF22B20D549B500BE92D2 /* libsqlite3.tbd */,
+				BCCFF22920D5499C00BE92D2 /* CoreTelephony.framework */,
+				BCCFF22720D5498E00BE92D2 /* SystemConfiguration.framework */,
 				F6BFE1C814DB0742C45E0771 /* Pods_hackinsampa.framework */,
 			);
 			name = Frameworks;
@@ -64,6 +225,30 @@
 				38C29F36F6724D346758F13D /* Pods-hackinsampa.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC9B6FD420D5E597007CA029 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC9B6FE820D5E597007CA029 /* Alamofire.framework */,
+				BC9B6FEA20D5E597007CA029 /* Bolts.framework */,
+				BC9B6FEC20D5E597007CA029 /* FBSDKCoreKit.framework */,
+				BC9B6FEE20D5E597007CA029 /* FBSDKLoginKit.framework */,
+				BC9B6FF020D5E597007CA029 /* FirebaseAuth.framework */,
+				BC9B6FF220D5E597007CA029 /* FirebaseCore.framework */,
+				BC9B6FF420D5E597007CA029 /* FirebaseDatabase.framework */,
+				BC9B6FF620D5E597007CA029 /* FirebaseMessaging.framework */,
+				BC9B6FF820D5E597007CA029 /* GoogleToolboxForMac.framework */,
+				BC9B6FFA20D5E597007CA029 /* GTMSessionFetcher.framework */,
+				BC9B6FFC20D5E597007CA029 /* JSQMessagesViewController.framework */,
+				BC9B6FFE20D5E597007CA029 /* JSQSystemSoundPlayer.framework */,
+				BC9B700020D5E597007CA029 /* leveldb.framework */,
+				BC9B700220D5E597007CA029 /* nanopb.framework */,
+				BC9B700420D5E597007CA029 /* Pods_hackinsampa.framework */,
+				BC9B700620D5E597007CA029 /* Protobuf.framework */,
+				BC9B700820D5E597007CA029 /* SwiftKeychainWrapper.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BCA75F3620D3E37400F38BFA = {
@@ -87,6 +272,11 @@
 		BCA75F4120D3E37500F38BFA /* hackinsampa */ = {
 			isa = PBXGroup;
 			children = (
+				BCCFF23620D55D8400BE92D2 /* Util */,
+				BCCFF23320D5562500BE92D2 /* Datasource */,
+				BCCFF23220D5561F00BE92D2 /* Custom */,
+				BCCFF23120D5561800BE92D2 /* Model */,
+				BCCFF23020D5561300BE92D2 /* Controller */,
 				BC33194E20D3EBC0008C12A3 /* hackinsampa.entitlements */,
 				BCA75F4220D3E37500F38BFA /* AppDelegate.swift */,
 				BCA75F4420D3E37500F38BFA /* ViewController.swift */,
@@ -98,8 +288,55 @@
 				BC497D4320D44B86001012E1 /* TableVC.swift */,
 				BCCFF22320D48E4B00BE92D2 /* ExpandableNames.swift */,
 				BCCFF22520D4900800BE92D2 /* ContactCell.swift */,
+				BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */,
 			);
 			path = hackinsampa;
+			sourceTree = "<group>";
+		};
+		BCCFF23020D5561300BE92D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BCCFF23420D5566800BE92D2 /* LoginVC.swift */,
+				BCCFF23920D5620D00BE92D2 /* DadosVC.swift */,
+				BCCFF23B20D581A000BE92D2 /* AcompanhamentoVC.swift */,
+				BCCFF23D20D5826400BE92D2 /* SecretariaVC.swift */,
+				BCCFF24120D590C000BE92D2 /* ChatVC.swift */,
+				BC9B6FCB20D5B876007CA029 /* OrgaoTVC.swift */,
+				BC9B6FCD20D5D51D007CA029 /* OrgaoDadosVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BCCFF23120D5561800BE92D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCCFF23220D5561F00BE92D2 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		BCCFF23320D5562500BE92D2 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				BC9B6FCF20D5D903007CA029 /* orgao.swift */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		BCCFF23620D55D8400BE92D2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BCCFF23720D55DA700BE92D2 /* Constraints.swift */,
+				BCCFF23F20D58F6700BE92D2 /* Constants.swift */,
+				BC9B6FD120D5DD64007CA029 /* DataService.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +351,7 @@
 				BCA75F3C20D3E37400F38BFA /* Frameworks */,
 				BCA75F3D20D3E37400F38BFA /* Resources */,
 				E87641F45B00796F172AE63E /* [CP] Embed Pods Frameworks */,
+				BCCFF22F20D54A5F00BE92D2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -158,12 +396,140 @@
 			mainGroup = BCA75F3620D3E37400F38BFA;
 			productRefGroup = BCA75F4020D3E37500F38BFA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BC9B6FD420D5E597007CA029 /* Products */;
+					ProjectRef = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BCA75F3E20D3E37400F38BFA /* hackinsampa */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BC9B6FE820D5E597007CA029 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = BC9B6FE720D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B6FEA20D5E597007CA029 /* Bolts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Bolts.framework;
+			remoteRef = BC9B6FE920D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B6FEC20D5E597007CA029 /* FBSDKCoreKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FBSDKCoreKit.framework;
+			remoteRef = BC9B6FEB20D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B6FEE20D5E597007CA029 /* FBSDKLoginKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FBSDKLoginKit.framework;
+			remoteRef = BC9B6FED20D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B6FF020D5E597007CA029 /* FirebaseAuth.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseAuth.framework;
+			remoteRef = BC9B6FEF20D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B6FF220D5E597007CA029 /* FirebaseCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseCore.framework;
+			remoteRef = BC9B6FF120D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B6FF420D5E597007CA029 /* FirebaseDatabase.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseDatabase.framework;
+			remoteRef = BC9B6FF320D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B6FF620D5E597007CA029 /* FirebaseMessaging.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseMessaging.framework;
+			remoteRef = BC9B6FF520D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B6FF820D5E597007CA029 /* GoogleToolboxForMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GoogleToolboxForMac.framework;
+			remoteRef = BC9B6FF720D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B6FFA20D5E597007CA029 /* GTMSessionFetcher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GTMSessionFetcher.framework;
+			remoteRef = BC9B6FF920D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B6FFC20D5E597007CA029 /* JSQMessagesViewController.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSQMessagesViewController.framework;
+			remoteRef = BC9B6FFB20D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B6FFE20D5E597007CA029 /* JSQSystemSoundPlayer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSQSystemSoundPlayer.framework;
+			remoteRef = BC9B6FFD20D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B700020D5E597007CA029 /* leveldb.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = leveldb.framework;
+			remoteRef = BC9B6FFF20D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B700220D5E597007CA029 /* nanopb.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = nanopb.framework;
+			remoteRef = BC9B700120D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B700420D5E597007CA029 /* Pods_hackinsampa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_hackinsampa.framework;
+			remoteRef = BC9B700320D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B700620D5E597007CA029 /* Protobuf.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Protobuf.framework;
+			remoteRef = BC9B700520D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC9B700820D5E597007CA029 /* SwiftKeychainWrapper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftKeychainWrapper.framework;
+			remoteRef = BC9B700720D5E597007CA029 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BCA75F3D20D3E37400F38BFA /* Resources */ = {
@@ -198,6 +564,19 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BCCFF22F20D54A5F00BE92D2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export ADRUM_ACCOUNT_NAME=\"test-eum-account-carlosdoki-1528984557621\"\n\nexport ADRUM_LICENSE_KEY=\"b3223ff5-4333-4abc-9dac-1098a337ae38\"\n";
+		};
 		E87641F45B00796F172AE63E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -206,28 +585,30 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-hackinsampa/Pods-hackinsampa-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -243,9 +624,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCFF24220D590C000BE92D2 /* ChatVC.swift in Sources */,
 				BCCFF22620D4900800BE92D2 /* ContactCell.swift in Sources */,
+				BCCFF24020D58F6700BE92D2 /* Constants.swift in Sources */,
+				BCCFF23820D55DA700BE92D2 /* Constraints.swift in Sources */,
 				BCCFF22420D48E4B00BE92D2 /* ExpandableNames.swift in Sources */,
+				BCCFF23C20D581A000BE92D2 /* AcompanhamentoVC.swift in Sources */,
+				BCCFF23520D5566800BE92D2 /* LoginVC.swift in Sources */,
+				BC9B6FD220D5DD64007CA029 /* DataService.swift in Sources */,
+				BCCFF23A20D5620D00BE92D2 /* DadosVC.swift in Sources */,
 				BC497D4420D44B86001012E1 /* TableVC.swift in Sources */,
+				BC9B6FCE20D5D51D007CA029 /* OrgaoDadosVC.swift in Sources */,
+				BCCFF23E20D5826400BE92D2 /* SecretariaVC.swift in Sources */,
+				BC9B6FD020D5D903007CA029 /* orgao.swift in Sources */,
+				BC9B6FCC20D5B876007CA029 /* OrgaoTVC.swift in Sources */,
 				BCA75F4520D3E37500F38BFA /* ViewController.swift in Sources */,
 				BCA75F4320D3E37500F38BFA /* AppDelegate.swift in Sources */,
 			);

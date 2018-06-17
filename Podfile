@@ -8,8 +8,11 @@ target 'hackinsampa' do
   # Pods for hackinsampa
   pod 'Firebase/Core'
   pod 'Alamofire'
-  pod 'Firebase/Firestore'
+  pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Messaging'
   pod 'AppDynamicsAgent'
+  pod 'FBSDKLoginKit'
+  pod 'SwiftKeychainWrapper'
+  pod 'JSQMessagesViewController'
 end
