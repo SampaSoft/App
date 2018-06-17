@@ -7,6 +7,9 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
   - FBSDKCoreKit (4.33.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.33.0):
@@ -66,6 +69,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AppDynamicsAgent
+  - Charts
   - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
@@ -79,6 +83,7 @@ SPEC REPOS:
     - Alamofire
     - AppDynamicsAgent
     - Bolts
+    - Charts
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Firebase
@@ -101,6 +106,7 @@ SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   AppDynamicsAgent: 70007d139a33e37df706359d95add89a5b68b4f7
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
   FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
   FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
   Firebase: 25ed0412036d7d008568d1fb4d2e9d81ea8a0a2c
@@ -119,6 +125,6 @@ SPEC CHECKSUMS:
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
 
-PODFILE CHECKSUM: 6252bae04d75f4eefbede4c72439c48069be9785
+PODFILE CHECKSUM: 961ae961359b6657a761f637b182006edc8513b9
 
 COCOAPODS: 1.5.3

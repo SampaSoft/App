@@ -15,4 +15,5 @@ target 'hackinsampa' do
   pod 'FBSDKLoginKit'
   pod 'SwiftKeychainWrapper'
   pod 'JSQMessagesViewController'
+  pod 'Charts'
 end

@@ -8,9 +8,11 @@
 
 import UIKit
 import Firebase
+import Charts
 
-class DadosOCVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class DadosOCVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var chartView: LineChartView!
     @IBOutlet weak var titleLbl: UINavigationItem!
     @IBOutlet weak var descricaoLbl: UITextField!
     @IBOutlet weak var justificativaLbl: UITextField!
@@ -23,6 +25,7 @@ class DadosOCVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var orgaoID : String!
     var arrayFornecedor = [String]()
     var arrayValor = [Double]()
+    var valores: [Double] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +33,7 @@ class DadosOCVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         titleLbl.title = id
         fornecedorTbl.delegate = self
         fornecedorTbl.dataSource = self
-        
+
         DataService.ds.REF_ORGAO.child(orgaoID).child("OC").queryOrdered(byChild: "id").queryEqual(toValue: id).observe(.value, with: {(snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
@@ -75,6 +78,23 @@ class DadosOCVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             }
             self.fornecedorTbl.reloadData()
         })
+        
+        var chartEntry = [ChartDataEntry]()
+        
+        valores = [120, 232, 456, 775, 33, 44, 44, 556, 344, 343]
+        for i in 0..<valores.count {
+            let value = ChartDataEntry(x: Double(i), y: valores[i])
+            chartEntry.append(value)
+        }
+        
+        let line = LineChartDataSet(values: chartEntry, label: "valor")
+        line.colors = [UIColor.green]
+        
+        let data = LineChartData()
+        data.addDataSet(line)
+        
+        chartView.data = data
+        chartView.chartDescription?.text = "Valor"
     }
     
     @IBAction func iniciarButtonPressed(_ sender: UIButton) {
@@ -114,4 +134,5 @@ class DadosOCVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+
 }

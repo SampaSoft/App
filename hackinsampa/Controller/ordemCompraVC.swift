@@ -66,4 +66,12 @@ class ordemCompraVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     @IBAction func voltarBtnPressed(_ sender: UIBarButtonItem) {
                  self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "DadosOCVC") as! DadosOCVC
+        controller.id  = ordens[indexPath.row].id
+        controller.orgaoID = orgaoID
+        self.present(controller, animated: true, completion: nil)
+    }
 }

@@ -39,6 +39,7 @@ class AcompanhamentoVC: UIViewController, UITableViewDelegate, UITableViewDataSo
                 for oc in ocs {
                     DataService.ds.REF_ORGAO.child(oc.value as! String).child("OC").observe(.value, with: {(snapshot) in
                         self.arrayOC = ["Ordem de Compra"]
+                        self.arrayOCOrgao = ["Ordem de Compra-orgao"]
                         if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                             for snap in snapshot {
                                 if let postDict = snap.value as? Dictionary<String, AnyObject> {
@@ -63,6 +64,8 @@ class AcompanhamentoVC: UIViewController, UITableViewDelegate, UITableViewDataSo
             }
             
             if let orgaos = value?["orgao"] as? NSDictionary {
+                self.arrayOrgao = ["Órgão"]
+                self.arrayOCOrgao2 = ["orgao"]
                 for orgao in orgaos {
                     DataService.ds.REF_ORGAO.child(orgao.key as! String).observe(.value, with: {(snapshot) in
                         if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {

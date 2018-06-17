@@ -67,8 +67,8 @@ class ChatVC: JSQMessagesViewController {
         //var color1 = hexStringToUIColor(hex: "#3570FF")
         //selectableView2.backgroundColor = color1
         
-        let randomViewLabel = UILabel(frame: CGRect(x: 100, y: 8, width: 250, height: 16))
-        randomViewLabel.text = "Teste"
+        let randomViewLabel = UILabel(frame: CGRect(x: 100, y: 15, width: 250, height: 16))
+        randomViewLabel.text = nroLiticacao
         
         let button = UIButton(type: .system) // let preferred over var here
         button.frame = CGRect(x: 8, y: 8, width: 50, height: 30)

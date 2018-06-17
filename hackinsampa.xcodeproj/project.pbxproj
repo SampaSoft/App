@@ -160,6 +160,13 @@
 			remoteGlobalIDString = 1DABB68C0A819CA4583CAC84148CA9FF;
 			remoteInfo = SwiftKeychainWrapper;
 		};
+		BCA7349D20D6816800D40F5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9B6FD320D5E597007CA029 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FC15EF67E853C00F1275D3DC78ADB1E4;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -244,6 +251,7 @@
 			children = (
 				BC9B6FE820D5E597007CA029 /* Alamofire.framework */,
 				BC9B6FEA20D5E597007CA029 /* Bolts.framework */,
+				BCA7349E20D6816800D40F5E /* Charts.framework */,
 				BC9B6FEC20D5E597007CA029 /* FBSDKCoreKit.framework */,
 				BC9B6FEE20D5E597007CA029 /* FBSDKLoginKit.framework */,
 				BC9B6FF020D5E597007CA029 /* FirebaseAuth.framework */,
@@ -547,6 +555,13 @@
 			remoteRef = BC9B700720D5E597007CA029 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		BCA7349E20D6816800D40F5E /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = BCA7349D20D6816800D40F5E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -604,6 +619,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-hackinsampa/Pods-hackinsampa-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -619,6 +635,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",

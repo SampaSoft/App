@@ -622,6 +622,7 @@
                     <connections>
                         <outlet property="ordemTbl" destination="Dho-WT-g0T" id="WWR-B4-1bo"/>
                         <outlet property="titleLbl" destination="95Q-Rd-pgJ" id="1jl-EU-d2g"/>
+                        <segue destination="miJ-ve-zeP" kind="show" id="BSB-Yk-7RH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qmd-hT-ncv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1502,7 +1503,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hS-QB-TPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5676" y="304"/>
+            <point key="canvasLocation" x="6225" y="306"/>
         </scene>
         <!--Inicio-->
         <scene sceneID="g0N-j4-VtV">
@@ -1739,7 +1740,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LfO-qr-sYx">
-                                                        <rect key="frame" x="20" y="310" width="335" height="293"/>
+                                                        <rect key="frame" x="20" y="440" width="335" height="163"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="70" id="dWq-hT-baw" customClass="FornecedorTVC" customModule="hackinsampa" customModuleProvider="target">
@@ -1797,6 +1798,23 @@
                                                             </tableViewCell>
                                                         </prototypes>
                                                     </tableView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiG-eF-FdO" customClass="LineChartView" customModule="Charts">
+                                                        <rect key="frame" x="20" y="310" width="335" height="120"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="120" id="LvV-Eo-lSQ"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço Médio: R$ 29,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-3G-KkS">
+                                                        <rect key="frame" x="20" y="426" width="335" height="14"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="KTK-70-1fZ"/>
+                                                            <constraint firstAttribute="height" constant="14" id="TGD-es-uJv"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                                        <color key="textColor" red="0.27450980390000002" green="0.63529411759999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1804,28 +1822,34 @@
                                                     <constraint firstItem="qBu-M2-dEg" firstAttribute="leading" secondItem="vrB-Os-pgX" secondAttribute="leading" constant="20" id="1rH-1W-ddO"/>
                                                     <constraint firstItem="h5H-U4-p4h" firstAttribute="top" secondItem="JAL-Cc-yQy" secondAttribute="bottom" id="1xQ-ka-hQP"/>
                                                     <constraint firstItem="6Ga-Og-BQ1" firstAttribute="leading" secondItem="vrB-Os-pgX" secondAttribute="leading" constant="20" id="3Cq-ko-vTW"/>
+                                                    <constraint firstItem="LfO-qr-sYx" firstAttribute="top" secondItem="SiG-eF-FdO" secondAttribute="bottom" constant="10" id="3GF-Pa-OTt"/>
                                                     <constraint firstAttribute="trailing" secondItem="OEk-yk-vRg" secondAttribute="trailing" constant="20" id="3xn-34-Vi4"/>
                                                     <constraint firstAttribute="trailing" secondItem="6Ga-Og-BQ1" secondAttribute="trailing" constant="20" id="7UL-Lb-nnB"/>
+                                                    <constraint firstItem="SiG-eF-FdO" firstAttribute="top" secondItem="6Ga-Og-BQ1" secondAttribute="bottom" constant="10" id="7or-8z-Lkj"/>
                                                     <constraint firstItem="W99-Zu-ces" firstAttribute="leading" secondItem="vrB-Os-pgX" secondAttribute="leading" constant="20" id="FGR-mV-pM0"/>
                                                     <constraint firstItem="htJ-OW-pab" firstAttribute="leading" secondItem="vrB-Os-pgX" secondAttribute="leading" constant="20" id="FK1-9x-23L"/>
                                                     <constraint firstItem="wbC-1H-Teb" firstAttribute="leading" secondItem="vrB-Os-pgX" secondAttribute="leading" constant="20" id="Fjc-J7-xQ5"/>
                                                     <constraint firstItem="H6u-h1-Sg9" firstAttribute="leading" secondItem="vrB-Os-pgX" secondAttribute="leading" constant="20" id="GVZ-Pi-HFb"/>
                                                     <constraint firstItem="H6u-h1-Sg9" firstAttribute="top" secondItem="OEk-yk-vRg" secondAttribute="bottom" id="HBG-IO-Csq"/>
                                                     <constraint firstItem="6Ga-Og-BQ1" firstAttribute="top" secondItem="W99-Zu-ces" secondAttribute="bottom" id="Hja-Tp-K8w"/>
+                                                    <constraint firstItem="LfO-qr-sYx" firstAttribute="top" secondItem="Byb-3G-KkS" secondAttribute="bottom" id="IXZ-SX-722"/>
                                                     <constraint firstAttribute="trailing" secondItem="h5H-U4-p4h" secondAttribute="trailing" constant="20" id="J3D-7G-jqr"/>
-                                                    <constraint firstItem="LfO-qr-sYx" firstAttribute="top" secondItem="6Ga-Og-BQ1" secondAttribute="bottom" constant="10" id="JGM-5K-ZIM"/>
                                                     <constraint firstItem="wbC-1H-Teb" firstAttribute="top" secondItem="htJ-OW-pab" secondAttribute="bottom" id="Rhx-8U-BeE"/>
                                                     <constraint firstItem="W99-Zu-ces" firstAttribute="top" secondItem="qBu-M2-dEg" secondAttribute="bottom" constant="10" id="UdP-XS-c3A"/>
                                                     <constraint firstItem="wmW-3M-PhV" firstAttribute="leading" secondItem="vrB-Os-pgX" secondAttribute="leading" constant="20" id="Vas-CG-6hQ"/>
                                                     <constraint firstAttribute="trailing" secondItem="wmW-3M-PhV" secondAttribute="trailing" constant="20" id="VzI-Fb-qnq"/>
                                                     <constraint firstItem="OEk-yk-vRg" firstAttribute="top" secondItem="h5H-U4-p4h" secondAttribute="bottom" constant="10" id="Wp9-lL-l5n"/>
+                                                    <constraint firstAttribute="trailing" secondItem="SiG-eF-FdO" secondAttribute="trailing" constant="20" id="bKg-CU-OFV"/>
+                                                    <constraint firstItem="Byb-3G-KkS" firstAttribute="leading" secondItem="vrB-Os-pgX" secondAttribute="leading" constant="20" id="bOw-AK-Mvz"/>
                                                     <constraint firstItem="wmW-3M-PhV" firstAttribute="top" secondItem="H6u-h1-Sg9" secondAttribute="bottom" constant="10" id="cNX-2K-EDb"/>
                                                     <constraint firstAttribute="bottom" secondItem="LfO-qr-sYx" secondAttribute="bottom" id="cue-gc-SNL"/>
                                                     <constraint firstItem="htJ-OW-pab" firstAttribute="top" secondItem="gRj-0G-Zzp" secondAttribute="bottom" id="d60-F8-fhS"/>
                                                     <constraint firstItem="gRj-0G-Zzp" firstAttribute="top" secondItem="vrB-Os-pgX" secondAttribute="top" constant="10" id="ecI-cg-kJm"/>
                                                     <constraint firstAttribute="trailing" secondItem="JAL-Cc-yQy" secondAttribute="trailing" constant="20" id="gGX-UW-IOa"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Byb-3G-KkS" secondAttribute="trailing" constant="20" id="gLU-bx-Woq"/>
                                                     <constraint firstItem="qBu-M2-dEg" firstAttribute="top" secondItem="wmW-3M-PhV" secondAttribute="bottom" id="gv1-Wp-APg"/>
                                                     <constraint firstAttribute="trailing" secondItem="htJ-OW-pab" secondAttribute="trailing" constant="20" id="gya-JX-spG"/>
+                                                    <constraint firstItem="SiG-eF-FdO" firstAttribute="leading" secondItem="vrB-Os-pgX" secondAttribute="leading" constant="20" id="iOp-hW-hIS"/>
                                                     <constraint firstAttribute="trailing" secondItem="wbC-1H-Teb" secondAttribute="trailing" constant="20" id="lMH-w5-UFj"/>
                                                     <constraint firstItem="JAL-Cc-yQy" firstAttribute="top" secondItem="wbC-1H-Teb" secondAttribute="bottom" constant="10" id="lk1-Cy-ALV"/>
                                                     <constraint firstAttribute="trailing" secondItem="qBu-M2-dEg" secondAttribute="trailing" constant="20" id="n3F-uu-iZC"/>
@@ -1871,6 +1895,7 @@
                         <viewLayoutGuide key="safeArea" id="2ds-hu-ldB"/>
                     </view>
                     <connections>
+                        <outlet property="chartView" destination="SiG-eF-FdO" id="PlT-ed-hU9"/>
                         <outlet property="dataAberturaLbl" destination="H6u-h1-Sg9" id="Kqh-ei-HC4"/>
                         <outlet property="dataAprovacaoLbl" destination="qBu-M2-dEg" id="qwY-tw-xXV"/>
                         <outlet property="descricaoLbl" destination="wbC-1H-Teb" id="RZA-na-7hI"/>
@@ -1942,6 +1967,7 @@
         <image name="list-simple-7" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="BSB-Yk-7RH"/>
         <segue reference="6ps-3y-ogu"/>
     </inferredMetricsTieBreakers>
 </document>
