@@ -8,10 +8,14 @@
 
 import UIKit
 import JSQMessagesViewController
+import SwiftKeychainWrapper
 
 class ChatVC: JSQMessagesViewController {
 
     var  messages = [JSQMessage]()
+    var postKey: String!
+    var nroLiticacao: String!
+    
     lazy var outgoingBubble: JSQMessagesBubbleImage = {
         return JSQMessagesBubbleImageFactory()!.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
     }()
@@ -23,9 +27,11 @@ class ChatVC: JSQMessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addViewOnTop()
-
-        senderId = "1234"
-        senderDisplayName = "Teste"
+        
+        automaticallyScrollsToMostRecentMessage = true
+        
+        senderId = KeychainWrapper.standard.string(forKey: KEY_UID)!
+        senderDisplayName = "..."
         
         self.collectionView?.collectionViewLayout.sectionInset = UIEdgeInsets(top: 40, left: 0, bottom: 0, right: 0)
         
@@ -115,6 +121,8 @@ class ChatVC: JSQMessagesViewController {
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!)
     {
         let ref = Constants.refs.databaseChats.childByAutoId()
+//       let ref = DB_BASE.child("licitacao").child(postKey).child("post").childByAutoId()
+//  orgao/postkey/OC/postkey/chat
         
         let message = ["sender_id": senderId, "name": senderDisplayName, "text": text]
         

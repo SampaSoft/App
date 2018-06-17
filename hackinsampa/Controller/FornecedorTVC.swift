@@ -10,6 +10,10 @@ import UIKit
 
 class FornecedorTVC: UITableViewCell {
 
+    @IBOutlet weak var fornecedorLbl: UILabel!
+    @IBOutlet weak var valorLbl: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +23,11 @@ class FornecedorTVC: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configureCell(fornecedor: String, valor: Double) {
+        fornecedorLbl.text = fornecedor
+        valorLbl.text = "Valor: R$ \(String(format: "%.2f", valor))"
     }
 
 }

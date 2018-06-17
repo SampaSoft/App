@@ -17,10 +17,8 @@ class OrgaoTVC: UITableViewCell {
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var visualizacaoLbl: UILabel!
     @IBOutlet weak var seguidoresLbl: UILabel!
-    @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var likesImg: UIImageView!
     
-    var link: SecretariaVC?
     var orgaos: Orgao!
     var likesref : DatabaseReference!
 
@@ -32,15 +30,6 @@ class OrgaoTVC: UITableViewCell {
         likesImg.addGestureRecognizer(tap)
         likesImg.isUserInteractionEnabled = true
     }
-
-//    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-//        super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        accessoryView = starButton
-//    }
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

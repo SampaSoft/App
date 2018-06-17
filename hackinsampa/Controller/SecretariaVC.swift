@@ -16,20 +16,11 @@ class SecretariaVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, 
     @IBOutlet weak var orgaoTbl: UITableView!
     @IBOutlet weak var contentView: UIView!
     
-    var array = [ ["Barueri", "SECRETARIA MUNICIPAL DE GESTAO", "SECRETARIA MUNICIPAL DE HABITACAO", "SECRETARIA MUNICIPAL DA SAUDE", "SECRETARIA MUNICIPAL DE INFRAESTRUTURA E OBRAS", "SECRETARIA MUNICIPAL DE INOVACAO E TECNOLOGIA", "SECRETARIA MUNICIPAL DE JUSTICA"],
-                  ["São Paulo", "PREFEITURA REGIONAL CIDADE ADEMAR", "PREFEITURA REGIONAL CIDADE TIRADENTES", "PREFEITURA REGIONAL DE SAPOPEMBA", "PREFEITURA REGIONAL DE VILA PRUDENTE", "PREFEITURA REGIONAL ERMELINO MATARAZZO", "PREFEITURA REGIONAL FREGUESIA/BRASILANDIA", "PREFEITURA REGIONAL GUAIANASES", "PREFEITURA REGIONAL IPIRANGA", "PREFEITURA REGIONAL ITAIM PAULISTA"]]
-    
-    var orgaos = [Orgao]()
-    
+    var orgaos = [Orgao]()    
     var pickerData: [String] = [String]()
     var activeField: UITextField?
     var lastOffset: CGPoint!
     var keyboardHeight: CGFloat!
-    
-    func someMethodIWantToCall(cell: UITableViewCell) {
-        guard let indexPathTapped = orgaoTbl.indexPath(for: cell) else { return }
-//          orgaoTbl.reloadRows(at: [indexPathTapped], with: .fade)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,7 +92,7 @@ class SecretariaVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, 
                 for snap in snapshot {
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
-                        print(postDict)
+//                        print(postDict)
                         let post = Orgao(postKey: key, postData: postDict)
                         self.orgaos.append(post)
                     }
@@ -128,7 +119,9 @@ class SecretariaVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         orgaos[indexPath.row].adjustVisualizacoes()
-        let controller = storyboard?.instantiateViewController(withIdentifier: "OrgaoDadosVC") as! OrgaoDadosVC
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ordemCompraVC") as! ordemCompraVC
+        controller.orgaoID = orgaos[indexPath.row].postKey
+        controller.orgaoNome = orgaos[indexPath.row].nome
         self.present(controller, animated: true, completion: nil)
     }
     

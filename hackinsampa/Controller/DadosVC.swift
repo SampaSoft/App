@@ -7,11 +7,25 @@
 //
 
 import UIKit
+import SwiftKeychainWrapper
+import Firebase
 
 class DadosVC: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var nomeLbl: UITextField!
+    @IBOutlet weak var cepLbl: UITextField!
+    @IBOutlet weak var logradouroLbl: UITextField!
+    @IBOutlet weak var numeroLbl: UITextField!
+    @IBOutlet weak var complementoLbl: UITextField!
+    @IBOutlet weak var bairroLbl: UITextField!
+    @IBOutlet weak var municipioLbl: UITextField!
+    @IBOutlet weak var estadoLbl: UITextField!
+    @IBOutlet weak var cpfLbl: UITextField!
+    @IBOutlet weak var rgLbl: UITextField!
+    @IBOutlet weak var datanascimentoLbl: UITextField!
+    @IBOutlet weak var sexoLbl: UITextField!
     
     var activeField: UITextField?
     var lastOffset: CGPoint!
@@ -20,6 +34,50 @@ class DadosVC: UIViewController, UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        DataService.ds.REF_USERS.child(KeychainWrapper.standard.string(forKey: KEY_UID)!).observeSingleEvent(of: .value, with: { (snapshot) in
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshot {
+                    if snap.key == "nome" {
+                        self.nomeLbl.text = snap.value as? String
+                    }
+                    if snap.key == "cep" {
+                        self.cepLbl.text = snap.value as? String
+                    }
+                    if snap.key == "logradouro" {
+                        self.logradouroLbl.text = snap.value as? String
+                    }
+                    if snap.key == "numero" {
+                        self.numeroLbl.text = snap.value as? String
+                    }
+                    if snap.key == "complemento" {
+                        self.complementoLbl.text = snap.value as? String
+                    }
+                    if snap.key == "bairro" {
+                        self.bairroLbl.text = snap.value as? String
+                    }
+                    if snap.key == "municipio" {
+                        self.municipioLbl.text = snap.value as? String
+                    }
+                    if snap.key == "estado" {
+                        self.estadoLbl.text = snap.value as? String
+                    }
+                    if snap.key == "cpf" {
+                        self.cpfLbl.text = snap.value as? String
+                    }
+                    if snap.key == "RG" {
+                        self.rgLbl.text = snap.value as? String
+                    }
+                    if snap.key == "datanascimento" {
+                        self.datanascimentoLbl.text = snap.value as? String
+                    }
+                    if snap.key == "sexo" {
+                        self.sexoLbl.text = snap.value as? String
+                    }
+
+
+                }
+            }
+        })
         // Observe keyboard change
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -86,12 +144,12 @@ extension DadosVC {
             }
             
             // set new offset for scroll view
-            UIView.animate(withDuration: 0.3, animations: {
-                // scroll to the position above keyboard 10 points
-                if self.lastOffset.x != nil {
-                    self.scrollView.contentOffset = CGPoint(x: self.lastOffset.x, y: collapseSpace + 5)
-                }
-            })
+//            UIView.animate(withDuration: 0.3, animations: {
+//                // scroll to the position above keyboard 10 points
+//                if self.lastOffset.x != nil {
+//                    self.scrollView.contentOffset = CGPoint(x: self.lastOffset.x, y: collapseSpace + 5)
+//                }
+//            })
         }
     }
     

@@ -21,6 +21,8 @@ class DataService {
     private var _REF_USERS = DB_BASE.child("users")
     private var _REF_CHATS = DB_BASE.child("chats")
     private var _REF_ORGAO = DB_BASE.child("orgao")
+    private var _REF_FORNECEDOR = DB_BASE.child("fornecedor")
+    private var _REF_ORDEM = DB_BASE.child("orgao").child("OC")
     
     var REF_BASE: DatabaseReference {
         return _REF_BASE
@@ -38,6 +40,14 @@ class DataService {
         return _REF_ORGAO
     }
 
+    var REF_ORDEM: DatabaseReference {
+        return _REF_ORDEM
+    }
+    
+    var REF_FORNECEDOR: DatabaseReference {
+        return _REF_FORNECEDOR
+    }
+    
     var REF_USER_CURRENT: DatabaseReference {
         let uid = KeychainWrapper.standard.string(forKey: KEY_UID)
         let user = REF_USERS.child(uid!)
